@@ -1,14 +1,16 @@
-(() => {
+document.addEventListener("DOMContentLoaded", () => {
   // Mobile nav
   const btn = document.querySelector('.nav-toggle');
   const list = document.querySelector('.nav-list');
-  if (btn && list){
+
+  if (btn && list) {
     btn.addEventListener('click', () => {
       const open = list.classList.toggle('open');
       btn.setAttribute('aria-expanded', String(open));
       btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     });
 
+    // Close menu on click
     list.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         list.classList.remove('open');
@@ -267,9 +269,10 @@
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       const val = dict[lang]?.[key];
-      if (val) el.innerHTML = val; // allow <span class="accent"> in title if needed
+      if (val) el.textContent = val;
     });
 
+    // Toggle button
     const toggle = document.getElementById('langToggle');
     if (toggle){
       const isAR = (lang === 'ar');
@@ -280,14 +283,18 @@
     localStorage.setItem('site_lang', lang);
   }
 
-  const saved = localStorage.getItem('site_lang') || 'en';
-  applyLang(saved);
+  // Apply saved language
+  let currentLang = localStorage.getItem('site_lang') || 'en';
+  applyLang(currentLang);
 
+  // Bind click
   const langToggle = document.getElementById('langToggle');
   if (langToggle){
     langToggle.addEventListener('click', () => {
-      const current = localStorage.getItem('site_lang') || 'en';
-      applyLang(current === 'en' ? 'ar' : 'en');
+      currentLang = (currentLang === 'en') ? 'ar' : 'en';
+      applyLang(currentLang);
     });
+  } else {
+    console.error("langToggle not found ❌ (check id='langToggle')");
   }
-})();
+});
