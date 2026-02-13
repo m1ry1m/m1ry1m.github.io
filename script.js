@@ -1,31 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Mobile nav
-  const btn = document.querySelector('.nav-toggle');
-  const list = document.querySelector('.nav-list');
+  const btn = document.querySelector(".nav-toggle");
+  const list = document.querySelector(".nav-list");
 
   if (btn && list) {
-    btn.addEventListener('click', () => {
-      const open = list.classList.toggle('open');
-      btn.setAttribute('aria-expanded', String(open));
-      btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    btn.addEventListener("click", () => {
+      const open = list.classList.toggle("open");
+      btn.setAttribute("aria-expanded", String(open));
+      btn.setAttribute("aria-label", open ? "Close menu" : "Open menu");
     });
 
     // Close menu on click
-    list.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        list.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-        btn.setAttribute('aria-label', 'Open menu');
+    list.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => {
+        list.classList.remove("open");
+        btn.setAttribute("aria-expanded", "false");
+        btn.setAttribute("aria-label", "Open menu");
       });
     });
   }
 
   // Footer dates
-  const year = document.getElementById('year');
-  const updated = document.getElementById('updated');
+  const year = document.getElementById("year");
+  const updated = document.getElementById("updated");
   const now = new Date();
   if (year) year.textContent = String(now.getFullYear());
-  if (updated) updated.textContent = now.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'2-digit' });
+  if (updated) {
+    updated.textContent = now.toLocaleDateString(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    });
+  }
 
   // i18n dictionary
   const dict = {
@@ -34,13 +40,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       nav_about: "About",
       nav_exp: "Experience",
+      nav_skills: "Skills",
       nav_projects: "Work",
       nav_certs: "Certifications",
       nav_contact: "Contact",
 
       hero_location: "Jeddah, Saudi Arabia",
-      hero_title: "Software Engineer building modern web solutions with a growing focus on cybersecurity.",
-      hero_lead: "Software Engineering graduate (University of Jeddah). I build clean, responsive websites and practical solutions. Currently pursuing a Higher Diploma in Cybersecurity.",
+      hero_title:
+        'Software Engineer building modern web solutions with a growing focus on <span class="accent">cybersecurity</span>.',
+      hero_lead:
+        "Software Engineering graduate (University of Jeddah). I build clean, responsive websites and practical solutions. Currently pursuing a Higher Diploma in Cybersecurity.",
 
       btn_work: "View Work",
       btn_cv: "Download Resume (PDF)",
@@ -63,14 +72,31 @@ document.addEventListener("DOMContentLoaded", () => {
       about_title: "About",
       about_sub: "Practical, detail-oriented, and focused on clean code.",
       about_summary_title: "Summary",
-      about_summary_p1: "I’m a Software Engineering graduate with hands-on experience building responsive web pages and supporting real business needs.",
-      about_summary_p2: "I’m currently expanding my skills through a Higher Diploma in Cybersecurity, with a strong interest in secure and reliable systems.",
+      about_summary_p1:
+        "I’m a Software Engineering graduate with hands-on experience building responsive web pages and supporting real business needs.",
+      about_summary_p2:
+        "I’m currently expanding my skills through a Higher Diploma in Cybersecurity, with a strong interest in secure and reliable systems.",
       about_skills_title: "Core Skills",
       skill_1: "Web development: HTML, CSS, JavaScript",
       skill_2: "Responsive UI, clean layouts, accessibility basics",
       skill_3: "Git & GitHub, deployment with GitHub Pages",
       skill_4: "Technical documentation and structured work",
       skill_5: "Cybersecurity fundamentals and best practices",
+
+      skills_title: "Skills",
+      skills_sub: "What I’m strong at — in a quick, visual view.",
+      s1_title: "Frontend Development",
+      s1_desc: "Responsive UI, clean layouts, modern HTML/CSS/JS.",
+      s2_title: "JavaScript",
+      s2_desc: "DOM, components, i18n toggles, and practical interactivity.",
+      s3_title: "Cybersecurity Foundations",
+      s3_desc: "Security mindset, basics, and continuous learning.",
+      s4_title: "Git & Deployment",
+      s4_desc: "GitHub workflows and publishing with GitHub Pages.",
+      s5_title: "Documentation",
+      s5_desc: "Clear writing, structured notes, and organized delivery.",
+      s6_title: "Product & UX Thinking",
+      s6_desc: "Readable content structure and user-first pages.",
 
       exp_title: "Experience",
       exp_sub: "Roles focused on systems, delivery, and business impact.",
@@ -126,18 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       p4_b3: "Improved deliverability and reduced spoofing risk",
 
       certs_title: "Certifications",
-      certs_sub: "Selected credentials and training.",
-      cert_ibm_1: "Cybersecurity Fundamentals (Nov 2024)",
-      cert_ibm_2: "Web Development Fundamentals (Nov 2024)",
-      fig_web: "Web Development Fundamentals — IBM SkillsBuild",
-      fig_cyber: "Cybersecurity Fundamentals — IBM SkillsBuild",
-
-      other_train: "Other Training",
-      cert_other_1: "Introduction to Cybersecurity — Cisco (Aug 2024)",
-      cert_other_2: "Data Management & Analytics — Huawei (Jul 2024)",
-      cert_other_3: "Fundamentals of Information Security — Institute of Public Administration",
-      cert_other_4: "Artificial Intelligence Concepts and Advanced Applications — SDAIA (Sep 2025)",
-      btn_ai: "Open SDAIA Certificate (PDF) ↗",
+      certs_sub: "Verified credentials (Credly) and selected training.",
 
       contact_title: "Contact",
       contact_sub: "Let’s connect.",
@@ -150,13 +165,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       nav_about: "نبذة",
       nav_exp: "الخبرات",
+      nav_skills: "المهارات",
       nav_projects: "الأعمال",
       nav_certs: "الشهادات",
       nav_contact: "تواصل",
 
       hero_location: "جدة، السعودية",
-      hero_title: "مهندسة برمجيات أبني حلول ويب حديثة مع اهتمام متزايد بالأمن السيبراني.",
-      hero_lead: "خريجة هندسة برمجيات (جامعة جدة). أطور مواقع نظيفة ومتجاوبة وحلول عملية. أدرس حاليًا دبلوم عالي في الأمن السيبراني.",
+      hero_title:
+        'مهندسة برمجيات أبني حلول ويب حديثة مع اهتمام متزايد بـ <span class="accent">الأمن السيبراني</span>.',
+      hero_lead:
+        "خريجة هندسة برمجيات (جامعة جدة). أطور مواقع نظيفة ومتجاوبة وحلول عملية. أدرس حاليًا دبلوم عالي في الأمن السيبراني.",
 
       btn_work: "عرض الأعمال",
       btn_cv: "تحميل السيرة (PDF)",
@@ -179,14 +197,31 @@ document.addEventListener("DOMContentLoaded", () => {
       about_title: "نبذة",
       about_sub: "عملية، دقيقة، وتركّز على كود نظيف.",
       about_summary_title: "ملخص",
-      about_summary_p1: "خريجة هندسة برمجيات ولدي خبرة عملية في بناء صفحات ويب متجاوبة ودعم احتياجات حقيقية للأعمال.",
-      about_summary_p2: "حاليًا أطور مهاراتي عبر دبلوم عالي في الأمن السيبراني مع اهتمام بالأنظمة الآمنة والموثوقة.",
+      about_summary_p1:
+        "خريجة هندسة برمجيات ولدي خبرة عملية في بناء صفحات ويب متجاوبة ودعم احتياجات حقيقية للأعمال.",
+      about_summary_p2:
+        "حاليًا أطور مهاراتي عبر دبلوم عالي في الأمن السيبراني مع اهتمام بالأنظمة الآمنة والموثوقة.",
       about_skills_title: "المهارات الأساسية",
       skill_1: "تطوير الويب: HTML, CSS, JavaScript",
       skill_2: "واجهات متجاوبة، تنظيم بصري، أساسيات الوصول",
       skill_3: "Git و GitHub والنشر عبر GitHub Pages",
       skill_4: "توثيق تقني وتنظيم العمل",
       skill_5: "أساسيات الأمن السيبراني وأفضل الممارسات",
+
+      skills_title: "المهارات",
+      skills_sub: "أبرز نقاط قوتي بشكل بصري سريع.",
+      s1_title: "تطوير الواجهات",
+      s1_desc: "تصميم متجاوب، تنظيم نظيف، HTML/CSS/JS.",
+      s2_title: "JavaScript",
+      s2_desc: "DOM، تفاعلات عملية، ودعم الترجمة داخل الموقع.",
+      s3_title: "أساسيات الأمن السيبراني",
+      s3_desc: "تفكير أمني، أساسيات قوية، وتعلم مستمر.",
+      s4_title: "Git والنشر",
+      s4_desc: "إدارة المشاريع على GitHub والنشر عبر GitHub Pages.",
+      s5_title: "التوثيق",
+      s5_desc: "كتابة واضحة، تنظيم، وتسليم مرتب.",
+      s6_title: "تفكير المستخدم",
+      s6_desc: "هيكلة محتوى سهلة القراءة وتجربة مستخدم ممتازة.",
 
       exp_title: "الخبرات",
       exp_sub: "أدوار تركّز على الأنظمة والتنفيذ والأثر العملي.",
@@ -242,56 +277,57 @@ document.addEventListener("DOMContentLoaded", () => {
       p4_b3: "تحسين التسليم وتقليل انتحال الهوية",
 
       certs_title: "الشهادات",
-      certs_sub: "مختارات من الشهادات والدورات.",
-      cert_ibm_1: "أساسيات الأمن السيبراني (نوفمبر 2024)",
-      cert_ibm_2: "أساسيات تطوير الويب (نوفمبر 2024)",
-      fig_web: "أساسيات تطوير الويب — IBM SkillsBuild",
-      fig_cyber: "أساسيات الأمن السيبراني — IBM SkillsBuild",
-
-      other_train: "دورات أخرى",
-      cert_other_1: "مقدمة في الأمن السيبراني — Cisco (أغسطس 2024)",
-      cert_other_2: "إدارة البيانات والتحليلات — Huawei (يوليو 2024)",
-      cert_other_3: "أساسيات أمن المعلومات — معهد الإدارة العامة",
-      cert_other_4: "مفاهيم الذكاء الاصطناعي وتطبيقات متقدمة — SDAIA (سبتمبر 2025)",
-      btn_ai: "فتح شهادة سدايا (PDF) ↗",
+      certs_sub: "اعتمادات موثّقة (Credly) ودورات مختارة.",
 
       contact_title: "تواصل",
       contact_sub: "يسعدني تواصلك.",
       contact_email: "البريد",
       contact_phone: "الجوال",
-    }
+    },
   };
 
-  function applyLang(lang){
-    document.documentElement.lang = (lang === 'ar') ? 'ar' : 'en';
-    document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  // Helper: elements that should keep HTML (like the hero title with <span class="accent">)
+  const allowHTMLKeys = new Set(["hero_title"]);
 
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
+  function applyLang(lang) {
+    const isAR = lang === "ar";
+    document.documentElement.lang = isAR ? "ar" : "en";
+    document.body.dir = isAR ? "rtl" : "ltr";
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
       const val = dict[lang]?.[key];
-      if (val) el.textContent = val;
+      if (!val) return;
+
+      if (allowHTMLKeys.has(key)) {
+        el.innerHTML = val; // keep <span class="accent">
+      } else {
+        el.textContent = val;
+      }
     });
 
     // Toggle button
-    const toggle = document.getElementById('langToggle');
-    if (toggle){
-      const isAR = (lang === 'ar');
-      toggle.textContent = isAR ? 'EN' : 'AR';
-      toggle.setAttribute('aria-label', isAR ? 'Translate to English' : 'Translate to Arabic');
+    const toggle = document.getElementById("langToggle");
+    if (toggle) {
+      toggle.textContent = isAR ? "EN" : "AR";
+      toggle.setAttribute(
+        "aria-label",
+        isAR ? "Translate to English" : "Translate to Arabic"
+      );
     }
 
-    localStorage.setItem('site_lang', lang);
+    localStorage.setItem("site_lang", lang);
   }
 
   // Apply saved language
-  let currentLang = localStorage.getItem('site_lang') || 'en';
+  let currentLang = localStorage.getItem("site_lang") || "en";
   applyLang(currentLang);
 
   // Bind click
-  const langToggle = document.getElementById('langToggle');
-  if (langToggle){
-    langToggle.addEventListener('click', () => {
-      currentLang = (currentLang === 'en') ? 'ar' : 'en';
+  const langToggle = document.getElementById("langToggle");
+  if (langToggle) {
+    langToggle.addEventListener("click", () => {
+      currentLang = currentLang === "en" ? "ar" : "en";
       applyLang(currentLang);
     });
   } else {
