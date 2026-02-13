@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skill_4: "Technical documentation and structured work",
       skill_5: "Cybersecurity fundamentals and best practices",
 
-      // Skills section (UPDATED)
+      // Skills section
       skills_title: "Skills",
       skills_sub: "What I’m strong at — in a quick, visual view.",
       s1_title: "Python",
@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       work_sub: "Selected projects and real outcomes.",
       p1_title: "Portfolio Website (GitHub Pages)",
       chip_project: "Project",
+      chip_work: "Work",
       label_stack: "Stack",
       p1_stack: "HTML • CSS • JavaScript • GitHub Pages",
       label_focus: "Focus",
@@ -130,18 +131,22 @@ document.addEventListener("DOMContentLoaded", () => {
       p1_b2: "Clear sections for skills, experience, and certifications.",
       p1_b3: "Fast loading + simple deployment.",
 
-      // NEW: Sheet project texts
+      // Sheet project (IMPORTANT keys to match HTML)
       sheet_title: "IT Operations & Systems Sheet (Alkan Industrial)",
       sheet_desc:
         "Ongoing work log & structured delivery across IT, security, and infrastructure.",
-      sheet_btn: "View Sheet ↗",
-      sheet_label: "Highlights",
+      btn_view_sheet: "View Sheet ↗",
+      btn_request: "Request details",
+      label_highlights: "Highlights",
       sheet_b1: "Odoo product database design (Marble / Granite / Stone).",
       sheet_b2: "Email domain security improvements + unified signatures (company-wide).",
       sheet_b3: "Employee onboarding: equipment, system access, and account setup.",
       sheet_b4: "Software accounts & license management for employees.",
       sheet_b5: "Factory internet infrastructure setup and upgrade coordination.",
       sheet_b6: "Centralized storage structure for government documents and company files.",
+      tag_itops: "IT Ops",
+      tag_security: "Security",
+      tag_infra: "Infrastructure",
 
       p2_title: "Corporate Website Support",
       chip_live: "Live",
@@ -153,7 +158,6 @@ document.addEventListener("DOMContentLoaded", () => {
       p2_tag3: "Delivery",
 
       p3_title: "Graduation Project (BLOOM)",
-      label_highlights: "Highlights",
       p3_b1: "Plant identification model using machine learning.",
       p3_b2: "Achieved 85% accuracy.",
       p3_b3: "Earned an A+ grade.",
@@ -167,13 +171,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
       certs_title: "Certifications",
       certs_sub: "Verified credentials (Credly) and selected training.",
-      open_credential: "Open credential ↗",
 
       contact_title: "Contact",
       contact_sub: "Let’s connect.",
       contact_email: "Email",
       contact_phone: "Phone",
-      whatsapp_btn: "WhatsApp ↗",
+      btn_whatsapp: "WhatsApp ↗",
     },
 
     ar: {
@@ -224,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
       skill_4: "توثيق تقني وتنظيم العمل",
       skill_5: "أساسيات الأمن السيبراني وأفضل الممارسات",
 
-      // Skills section (UPDATED)
+      // Skills section
       skills_title: "المهارات",
       skills_sub: "أبرز نقاط قوتي بشكل بصري سريع.",
       s1_title: "Python",
@@ -264,6 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
       work_sub: "مختارات من المشاريع ونتائج حقيقية.",
       p1_title: "موقع بورتفوليو (GitHub Pages)",
       chip_project: "مشروع",
+      chip_work: "عمل",
       label_stack: "التقنيات",
       p1_stack: "HTML • CSS • JavaScript • GitHub Pages",
       label_focus: "التركيز",
@@ -271,17 +275,22 @@ document.addEventListener("DOMContentLoaded", () => {
       p1_b2: "أقسام واضحة للمهارات والخبرة والشهادات.",
       p1_b3: "تحميل سريع ونشر بسيط.",
 
-      // NEW: Sheet project texts
+      // Sheet project (IMPORTANT keys to match HTML)
       sheet_title: "ملف أعمال وتقارير تقنية المعلومات (شركة الكان الصناعية)",
-      sheet_desc: "سجل عمل مستمر وتسليم منظم في تقنية المعلومات والأمن والبنية التحتية.",
-      sheet_btn: "عرض الشيت ↗",
-      sheet_label: "أبرز الأعمال",
+      sheet_desc:
+        "سجل عمل مستمر وتسليم منظم في تقنية المعلومات والأمن والبنية التحتية.",
+      btn_view_sheet: "عرض الشيت ↗",
+      btn_request: "طلب التفاصيل",
+      label_highlights: "أبرز الأعمال",
       sheet_b1: "تصميم قاعدة بيانات منتجات Odoo (رخام / جرانيت / حجر).",
       sheet_b2: "تحسين أمن الدومين للبريد + توحيد التواقيع (على مستوى الشركة).",
       sheet_b3: "تجهيز الموظفين الجدد: أجهزة وصلاحيات وإعدادات أنظمة.",
       sheet_b4: "إعداد حسابات البرامج وإدارة التراخيص للموظفين.",
-      sheet_b5: "تهيئة/ترقية انترنت المصنع وتنسيق الأجهزة والمشتريات.",
+      sheet_b5: "تهيئة/ترقية إنترنت المصنع وتنسيق الأجهزة والمشتريات.",
       sheet_b6: "تنظيم تخزين مركزي لملفات ووثائق الشركة الحكومية.",
+      tag_itops: "تشغيل IT",
+      tag_security: "أمن",
+      tag_infra: "بنية تحتية",
 
       p2_title: "دعم موقع شركة",
       chip_live: "مباشر",
@@ -307,17 +316,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
       certs_title: "الشهادات",
       certs_sub: "اعتمادات موثّقة (Credly) ودورات مختارة.",
-      open_credential: "فتح الاعتماد ↗",
 
       contact_title: "تواصل",
       contact_sub: "يسعدني تواصلك.",
       contact_email: "البريد",
       contact_phone: "الجوال",
-      whatsapp_btn: "واتساب ↗",
+      btn_whatsapp: "واتساب ↗",
     },
   };
 
-  // Helper: elements that should keep HTML (like the hero title with <span class="accent">)
+  // Keys that must keep HTML
   const allowHTMLKeys = new Set(["hero_title"]);
 
   function applyLang(lang) {
@@ -330,21 +338,14 @@ document.addEventListener("DOMContentLoaded", () => {
       const val = dict[lang]?.[key];
       if (!val) return;
 
-      if (allowHTMLKeys.has(key)) {
-        el.innerHTML = val; // keep <span class="accent">
-      } else {
-        el.textContent = val;
-      }
+      if (allowHTMLKeys.has(key)) el.innerHTML = val;
+      else el.textContent = val;
     });
 
-    // Toggle button
     const toggle = document.getElementById("langToggle");
     if (toggle) {
       toggle.textContent = isAR ? "EN" : "AR";
-      toggle.setAttribute(
-        "aria-label",
-        isAR ? "Translate to English" : "Translate to Arabic"
-      );
+      toggle.setAttribute("aria-label", isAR ? "Translate to English" : "Translate to Arabic");
     }
 
     localStorage.setItem("site_lang", lang);
