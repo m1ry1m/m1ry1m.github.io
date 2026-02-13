@@ -1,20 +1,22 @@
-/* ====== Pro Cold Dev Theme ====== */
+/* ====== Pro Soft Feminine Dev Theme (Dark + Pink/Mauve) ====== */
 :root{
-  --bg: #070b14;
-  --bg2: #0b1022;
-  --card: rgba(255,255,255,.05);
-  --card2: rgba(255,255,255,.07);
-  --text: rgba(255,255,255,.92);
+  --bg:  #080714;
+  --bg2: #0f0b1f;
+
+  --card:  rgba(255,255,255,.05);
+  --card2: rgba(255,255,255,.075);
+
+  --text:  rgba(255,255,255,.92);
   --muted: rgba(255,255,255,.72);
   --faint: rgba(255,255,255,.55);
   --border: rgba(255,255,255,.12);
 
-  /* cold accents */
-  --accent: #3b82f6;   /* blue */
-  --accent2:#22d3ee;   /* cyan */
-  --accent3:#60a5fa;   /* soft blue */
+  /* soft feminine accents */
+  --accent:  #e8a2c9;  /* dusty pink */
+  --accent2: #c7a3e6;  /* soft mauve */
+  --accent3: #f0c6dd;  /* light pink */
 
-  --shadow: 0 10px 28px rgba(0,0,0,.45);
+  --shadow:  0 10px 28px rgba(0,0,0,.45);
   --shadow2: 0 8px 18px rgba(0,0,0,.38);
   --radius: 16px;
 }
@@ -26,8 +28,8 @@ body{
   margin:0;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background:
-    radial-gradient(1200px 800px at 15% 0%, rgba(59,130,246,.18), transparent 60%),
-    radial-gradient(900px 600px at 85% 10%, rgba(34,211,238,.14), transparent 60%),
+    radial-gradient(1200px 800px at 15% 0%, rgba(232,162,201,.18), transparent 60%),
+    radial-gradient(900px 600px at 85% 10%, rgba(199,163,230,.14), transparent 60%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   color: var(--text);
   line-height: 1.6;
@@ -66,7 +68,7 @@ img{ max-width: 100%; display:block; }
 
 .small{ font-size: .92rem; }
 .muted{ color: var(--muted); }
-.accent{ color: var(--accent2); } /* cyan accent */
+.accent{ color: var(--accent2); } /* mauve accent */
 
 /* ====== Header ====== */
 .site-header{
@@ -74,7 +76,7 @@ img{ max-width: 100%; display:block; }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(14px);
-  background: rgba(7,11,20,.72);
+  background: rgba(8,7,20,.72);
   border-bottom: 1px solid var(--border);
 }
 .header-inner{
@@ -92,7 +94,7 @@ img{ max-width: 100%; display:block; }
   border-radius: 14px;
   object-fit: cover;
   border: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(59,130,246,.18), rgba(34,211,238,.14));
+  background: linear-gradient(135deg, rgba(232,162,201,.18), rgba(199,163,230,.14));
   box-shadow: var(--shadow2);
 }
 .name{ font-weight: 800; letter-spacing: -.02em; }
@@ -113,6 +115,14 @@ img{ max-width: 100%; display:block; }
 }
 .lang-toggle:hover,
 .nav-toggle:hover{ background: rgba(255,255,255,.08); text-decoration:none; }
+
+.lang-toggle:focus-visible,
+.nav-toggle:focus-visible,
+.btn:focus-visible,
+.link-row:focus-visible{
+  outline: 2px solid rgba(199,163,230,.55);
+  outline-offset: 3px;
+}
 
 .nav-toggle{ display:none; padding: .55rem .8rem; }
 
@@ -138,7 +148,7 @@ img{ max-width: 100%; display:block; }
 /* ====== Sections ====== */
 .section{ padding: 4.2rem 0; }
 .section.alt{
-  background: linear-gradient(180deg, rgba(59,130,246,.06), rgba(34,211,238,.03));
+  background: linear-gradient(180deg, rgba(232,162,201,.06), rgba(199,163,230,.03));
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
@@ -205,8 +215,8 @@ img{ max-width: 100%; display:block; }
   inset: -40% -10% auto -10%;
   height: 420px;
   background:
-    radial-gradient(circle at 30% 40%, rgba(59,130,246,.22), transparent 55%),
-    radial-gradient(circle at 70% 40%, rgba(34,211,238,.16), transparent 55%);
+    radial-gradient(circle at 30% 40%, rgba(232,162,201,.22), transparent 55%),
+    radial-gradient(circle at 70% 40%, rgba(199,163,230,.16), transparent 55%);
   filter: blur(20px);
   opacity: .9;
   pointer-events:none;
@@ -253,7 +263,7 @@ img{ max-width: 100%; display:block; }
 .bullets{ margin: .4rem 0 0; padding-left: 1.1rem; color: var(--muted); }
 .bullets li{ margin: .25rem 0; }
 
-/* ====== Skills (clean professional tiles) ====== */
+/* ====== Skills tiles ====== */
 .skills-grid{
   display:grid;
   gap: 1rem;
@@ -277,8 +287,8 @@ img{ max-width: 100%; display:block; }
   inset: -70% -50% auto -50%;
   height: 260px;
   background:
-    radial-gradient(circle at 30% 40%, rgba(59,130,246,.18), transparent 55%),
-    radial-gradient(circle at 70% 40%, rgba(34,211,238,.12), transparent 55%);
+    radial-gradient(circle at 30% 40%, rgba(232,162,201,.18), transparent 55%),
+    radial-gradient(circle at 70% 40%, rgba(199,163,230,.12), transparent 55%);
   filter: blur(18px);
   opacity: .75;
   pointer-events:none;
@@ -348,7 +358,7 @@ img{ max-width: 100%; display:block; }
 .dot{
   width: 12px; height: 12px; border-radius: 99px;
   background: var(--accent2);
-  box-shadow: 0 0 0 6px rgba(34,211,238,.14);
+  box-shadow: 0 0 0 6px rgba(199,163,230,.14);
 }
 .spot-links{ margin-top: .9rem; display:flex; flex-direction: column; gap: .45rem; }
 .link-row{
@@ -375,13 +385,13 @@ img{ max-width: 100%; display:block; }
 .pulse{
   width: 10px; height: 10px; border-radius: 99px;
   background: var(--accent2);
-  box-shadow: 0 0 0 0 rgba(34,211,238,.0);
+  box-shadow: 0 0 0 0 rgba(199,163,230,.0);
   animation: pulse 1.8s infinite;
 }
 @keyframes pulse{
-  0%{ box-shadow: 0 0 0 0 rgba(34,211,238,.0); }
-  35%{ box-shadow: 0 0 0 10px rgba(34,211,238,.12); }
-  100%{ box-shadow: 0 0 0 18px rgba(34,211,238,.0); }
+  0%{ box-shadow: 0 0 0 0 rgba(199,163,230,.0); }
+  35%{ box-shadow: 0 0 0 10px rgba(199,163,230,.12); }
+  100%{ box-shadow: 0 0 0 18px rgba(199,163,230,.0); }
 }
 
 /* Stats */
@@ -434,7 +444,7 @@ img{ max-width: 100%; display:block; }
 .btn:hover{ background: rgba(255,255,255,.08); text-decoration: none; }
 
 .btn.primary{
-  background: linear-gradient(135deg, rgba(59,130,246,.55), rgba(34,211,238,.22));
+  background: linear-gradient(135deg, rgba(232,162,201,.55), rgba(199,163,230,.22));
   border-color: rgba(255,255,255,.18);
 }
 .btn.ghost{ background: rgba(255,255,255,.035); }
@@ -468,21 +478,7 @@ img{ max-width: 100%; display:block; }
   box-shadow: var(--shadow);
 }
 
-/* important: keep badge consistent and not huge */
-.cert-badge{
-  width: 88px;
-  height: 88px;
-  border-radius: 16px;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,.04);
-  overflow:hidden;
-  flex: 0 0 auto;
-}
-.cert-badge{
-  object-fit: cover;
-}
-
-/* in case you wrap badge with <img class="cert-badge"> */
+/* keep badge consistent (not huge) */
 img.cert-badge{
   width: 88px;
   height: 88px;
@@ -490,9 +486,9 @@ img.cert-badge{
   border: 1px solid var(--border);
   background: rgba(255,255,255,.04);
   object-fit: cover;
+  flex: 0 0 auto;
 }
 
-/* text */
 .cert-info{
   flex: 1 1 auto;
   min-width: 0;
@@ -512,7 +508,7 @@ img.cert-badge{
 }
 .cert-cta{
   margin-top: .55rem;
-  color: rgba(34,211,238,.92);
+  color: rgba(199,163,230,.92);
   font-weight: 800;
 }
 
@@ -544,7 +540,7 @@ img.cert-badge{
     position: absolute;
     right: 0;
     top: calc(100% + .6rem);
-    background: rgba(7,11,20,.95);
+    background: rgba(8,7,20,.95);
     border: 1px solid var(--border);
     border-radius: 16px;
     padding: .6rem;
@@ -560,4 +556,3 @@ img.cert-badge{
   .stats{ grid-template-columns: 1fr; }
   .skills-grid{ grid-template-columns: 1fr; }
 }
-
