@@ -34,6 +34,7 @@
         <ul class="nav-list">
           <li><a href="#about" data-i18n="nav_about">About</a></li>
           <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
           <li><a href="#projects" data-i18n="nav_projects">Work</a></li>
           <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
           <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
@@ -149,7 +150,55 @@
       </div>
     </section>
 
-    <section id="experience" class="section alt">
+    <!-- NEW: Skills (tiles) -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="skills_title">Skills</h2>
+          <p data-i18n="skills_sub">What I’m strong at — in a quick, visual view.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">💻</div>
+            <h3 data-i18n="s1_title">Frontend Development</h3>
+            <p class="muted" data-i18n="s1_desc">Responsive UI, clean layouts, modern HTML/CSS/JS.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🧩</div>
+            <h3 data-i18n="s2_title">JavaScript</h3>
+            <p class="muted" data-i18n="s2_desc">DOM, components, i18n toggles, and practical interactivity.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🛡️</div>
+            <h3 data-i18n="s3_title">Cybersecurity Foundations</h3>
+            <p class="muted" data-i18n="s3_desc">Security mindset, basics, and continuous learning.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">🔧</div>
+            <h3 data-i18n="s4_title">Git & Deployment</h3>
+            <p class="muted" data-i18n="s4_desc">GitHub workflows and publishing with GitHub Pages.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">📝</div>
+            <h3 data-i18n="s5_title">Documentation</h3>
+            <p class="muted" data-i18n="s5_desc">Clear writing, structured notes, and organized delivery.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">✨</div>
+            <h3 data-i18n="s6_title">Product & UX Thinking</h3>
+            <p class="muted" data-i18n="s6_desc">Readable content structure and user-first pages.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="exp_title">Experience</h2>
@@ -202,7 +251,7 @@
       </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="projects" class="section alt">
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="work_title">Work</h2>
@@ -290,49 +339,64 @@
       </div>
     </section>
 
-    <section id="certifications" class="section alt">
+    <!-- UPDATED: Certifications as Credly tiles -->
+    <section id="certifications" class="section">
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="certs_title">Certifications</h2>
-          <p data-i18n="certs_sub">Selected credentials and training.</p>
+          <p data-i18n="certs_sub">Verified credentials (Credly) and selected training.</p>
         </div>
 
-        <div class="grid two">
-          <div class="card">
-            <h3>IBM SkillsBuild</h3>
-            <ul class="bullets">
-              <li data-i18n="cert_ibm_1">Cybersecurity Fundamentals (Nov 2024)</li>
-              <li data-i18n="cert_ibm_2">Web Development Fundamentals (Nov 2024)</li>
-            </ul>
-
-            <div class="gallery">
-              <figure>
-                <img src="assets/ibm-web-dev-fundamentals.png" alt="IBM SkillsBuild Web Development Fundamentals badge" loading="lazy">
-                <figcaption data-i18n="fig_web">Web Development Fundamentals — IBM SkillsBuild</figcaption>
-              </figure>
-              <figure>
-                <img src="assets/ibm-cybersecurity-fundamentals.png" alt="IBM SkillsBuild Cybersecurity Fundamentals badge" loading="lazy">
-                <figcaption data-i18n="fig_cyber">Cybersecurity Fundamentals — IBM SkillsBuild</figcaption>
-              </figure>
+        <div class="cert-grid">
+          <a class="cert-card" href="https://www.credly.com/badges/2f998213-dfb4-4ef9-a24e-61075973bea5/public_url" target="_blank" rel="noopener">
+            <img class="cert-badge" src="assets/credly-cybersecurity-fundamentals.png" alt="Cybersecurity Fundamentals">
+            <div class="cert-info">
+              <div class="cert-title">Cybersecurity Fundamentals</div>
+              <div class="cert-meta">IBM SkillsBuild • Credly</div>
+              <div class="cert-cta">Open credential ↗</div>
             </div>
-          </div>
+          </a>
 
-          <div class="card">
-            <h3 data-i18n="other_train">Other Training</h3>
-            <ul class="bullets">
-              <li data-i18n="cert_other_1">Introduction to Cybersecurity — Cisco (Aug 2024)</li>
-              <li data-i18n="cert_other_2">Data Management & Analytics — Huawei (Jul 2024)</li>
-              <li data-i18n="cert_other_3">Fundamentals of Information Security — Institute of Public Administration</li>
-              <li data-i18n="cert_other_4">Artificial Intelligence Concepts and Advanced Applications — SDAIA (Sep 2025)</li>
-            </ul>
+          <a class="cert-card" href="https://www.credly.com/badges/5341f422-2b41-4e3d-b399-21b5c01cf6bb/public_url" target="_blank" rel="noopener">
+            <img class="cert-badge" src="assets/credly-web-development-fundamentals.png" alt="Web Development Fundamentals">
+            <div class="cert-info">
+              <div class="cert-title">Web Development Fundamentals</div>
+              <div class="cert-meta">IBM SkillsBuild • Credly</div>
+              <div class="cert-cta">Open credential ↗</div>
+            </div>
+          </a>
 
-            <a class="btn small" href="assets/AI.pdf" target="_blank" rel="noopener" data-i18n="btn_ai">Open SDAIA Certificate (PDF) ↗</a>
-          </div>
+          <a class="cert-card" href="https://www.credly.com/badges/25182370-b4b1-4121-addd-841d65e817d5/linked_in_profile" target="_blank" rel="noopener">
+            <img class="cert-badge" src="assets/credly-3.png" alt="Data Science">
+            <div class="cert-info">
+              <div class="cert-title">Data Science</div>
+              <div class="cert-meta">Simplilearn • Credly</div>
+              <div class="cert-cta">Open credential ↗</div>
+            </div>
+          </a>
+
+          <a class="cert-card" href="https://www.credly.com/badges/f402aaa6-fe57-4cca-9861-077d1c0dddb3/linked_in_profile" target="_blank" rel="noopener">
+            <img class="cert-badge" src="assets/credly-4.png" alt="Agile Scrum Foundation">
+            <div class="cert-info">
+              <div class="cert-title">Agile Scrum Foundation</div>
+              <div class="cert-meta">Simplilearn • Credly</div>
+              <div class="cert-cta">Open credential ↗</div>
+            </div>
+          </a>
+
+          <a class="cert-card" href="https://www.credly.com/badges/a89a7dc6-0cdc-45f7-8e42-55b0f00ab168/linked_in_profile" target="_blank" rel="noopener">
+            <img class="cert-badge" src="assets/credly-5.png" alt="Generative AI">
+            <div class="cert-info">
+              <div class="cert-title">Generative AI</div>
+              <div class="cert-meta">Google Cloud • Credly</div>
+              <div class="cert-cta">Open credential ↗</div>
+            </div>
+          </a>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section alt">
       <div class="container">
         <div class="section-head">
           <h2 data-i18n="contact_title">Contact</h2>
