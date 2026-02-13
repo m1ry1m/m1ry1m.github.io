@@ -9,7 +9,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <!-- cache buster (غيّري الرقم كل مرة تعدلين css/js) -->
+  <link rel="stylesheet" href="styles.css?v=9" />
 </head>
 
 <body>
@@ -18,9 +20,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-        <!-- Logo = Bitmoji/Emoji image -->
         <img class="avatar" src="assets/avatar.png" alt="Maryam Shami avatar" />
-
         <div class="brand-text">
           <div class="name">Maryam Shami</div>
           <div class="tag" data-i18n="brand_tag">Software Engineer • Web Developer • Cybersecurity (In Progress)</div>
@@ -150,7 +150,7 @@
       </div>
     </section>
 
-    <!-- Skills (tiles) -->
+    <!-- Skills -->
     <section id="skills" class="section alt">
       <div class="container">
         <div class="section-head">
@@ -280,37 +280,42 @@
             </div>
           </article>
 
+          <!-- ✅ UPDATED: Sheet card (translated via data-i18n) -->
           <article class="card project case">
             <div class="proj-top">
-              <h3>IT Operations & Systems Sheet (Alkan Industrial)</h3>
-              <span class="chip">Work</span>
+              <h3 data-i18n="sheet_title">IT Operations & Systems Sheet (Alkan Industrial)</h3>
+              <span class="chip" data-i18n="chip_work">Work</span>
             </div>
 
-            <p class="muted">Ongoing work log & structured delivery across IT, security, and infrastructure.</p>
+            <p class="muted" data-i18n="sheet_desc">
+              Ongoing work log & structured delivery across IT, security, and infrastructure.
+            </p>
 
             <div class="case-actions">
-              <a class="btn small" href="https://docs.google.com/spreadsheets/d/1mcqjFFdnSMKTEzeD4kgKDkMjNeSvcX45SPnCLD2vbak/edit?usp=sharing" target="_blank" rel="noopener">
+              <a class="btn small" href="https://docs.google.com/spreadsheets/d/1mcqjFFdnSMKTEzeD4kgKDkMjNeSvcX45SPnCLD2vbak/edit?usp=sharing" target="_blank" rel="noopener" data-i18n="btn_view_sheet">
                 View Sheet ↗
               </a>
-              <a class="btn small ghost" href="#contact">Request details</a>
+              <a class="btn small ghost" href="#contact" data-i18n="btn_request">
+                Request details
+              </a>
             </div>
 
             <div class="case-block">
-              <div class="case-label">Highlights</div>
+              <div class="case-label" data-i18n="label_highlights">Highlights</div>
               <ul class="bullets">
-                <li>Odoo product database design (Marble / Granite / Stone).</li>
-                <li>Email domain security improvements + unified signatures (company-wide).</li>
-                <li>Employee onboarding: equipment, system access, and account setup.</li>
-                <li>Software accounts & license management for employees.</li>
-                <li>Factory internet infrastructure setup and upgrade coordination.</li>
-                <li>Centralized storage structure for government documents and company files.</li>
+                <li data-i18n="sheet_b1">Odoo product database design (Marble / Granite / Stone).</li>
+                <li data-i18n="sheet_b2">Email domain security improvements + unified signatures (company-wide).</li>
+                <li data-i18n="sheet_b3">Employee onboarding: equipment, system access, and account setup.</li>
+                <li data-i18n="sheet_b4">Software accounts & license management for employees.</li>
+                <li data-i18n="sheet_b5">Factory internet infrastructure setup and upgrade coordination.</li>
+                <li data-i18n="sheet_b6">Centralized storage structure for government documents and company files.</li>
               </ul>
             </div>
 
             <div class="case-mini">
-              <span class="pill">IT Ops</span>
-              <span class="pill">Security</span>
-              <span class="pill">Infrastructure</span>
+              <span class="pill" data-i18n="tag_itops">IT Ops</span>
+              <span class="pill" data-i18n="tag_security">Security</span>
+              <span class="pill" data-i18n="tag_infra">Infrastructure</span>
             </div>
           </article>
 
@@ -373,7 +378,7 @@
       </div>
     </section>
 
-    <!-- Certifications as Credly tiles -->
+    <!-- Certifications -->
     <section id="certifications" class="section">
       <div class="container">
         <div class="section-head">
@@ -445,11 +450,11 @@
 
           <div class="card">
             <h3 data-i18n="contact_phone">Phone</h3>
-            <p>
-              <a href="tel:+966539407179">0539407179</a>
-            </p>
+            <p><a href="tel:+966539407179">0539407179</a></p>
+
+            <!-- ✅ translated whatsapp button -->
             <div style="margin-top:.75rem;">
-              <a class="btn small" href="https://wa.me/966539407179" target="_blank" rel="noopener">
+              <a class="btn small" href="https://wa.me/966539407179" target="_blank" rel="noopener" data-i18n="btn_whatsapp">
                 WhatsApp ↗
               </a>
             </div>
@@ -471,6 +476,7 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <!-- cache buster -->
+  <script src="script.js?v=9"></script>
 </body>
 </html>
