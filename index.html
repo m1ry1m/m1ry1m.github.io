@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maryam Shami | Odoo & IT | Cybersecurity (In Progress)</title>
-  <meta name="description" content="Maryam Shami — Software Engineering graduate. Odoo (HR/ERP) customization, IT systems, web projects, and digital marketing." />
+  <title>Maryam Shami | Software Engineer | Cybersecurity (In Progress)</title>
+  <meta name="description" content="Maryam Shami — Software Engineer & Web Developer. Practical web solutions, projects, and a growing focus on cybersecurity." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3EM%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,27 +18,25 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
-
-        <!-- خيار 1: افاتار (ارفعي صورة assets/avatar.jpg ثم فعّلي هذا) -->
-        <!-- <img class="avatar" src="assets/avatar.jpg" alt="Maryam Shami" /> -->
-
-        <!-- خيار 2: لوقو نصّي (الوضع الحالي) -->
-        <div class="mark" aria-hidden="true">MS</div>
+        <!-- Logo = Bitmoji/Emoji image -->
+        <img class="avatar" src="assets/avatar.png" alt="Maryam Shami avatar" />
 
         <div class="brand-text">
           <div class="name">Maryam Shami</div>
-          <div class="tag">Odoo (HR/ERP) • IT Operations • Web Projects • Cybersecurity (In Progress)</div>
+          <div class="tag" data-i18n="brand_tag">Software Engineer • Web Developer • Cybersecurity (In Progress)</div>
         </div>
       </div>
 
       <nav class="nav">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Translate to Arabic">AR</button>
         <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
         <ul class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Case Studies</a></li>
-          <li><a href="#certifications">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" data-i18n="nav_about">About</a></li>
+          <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav_projects">Work</a></li>
+          <li><a href="#certifications" data-i18n="nav_certs">Certifications</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -48,24 +46,26 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-left">
-          <p class="eyebrow">Jeddah, Saudi Arabia</p>
+          <p class="eyebrow" data-i18n="hero_location">Jeddah, Saudi Arabia</p>
 
-          <h1>Odoo & IT Specialist delivering <span class="accent">ERP-ready</span> solutions, secure email setups, and modern web experiences.</h1>
+          <h1 data-i18n="hero_title">
+            Software Engineer building modern web solutions with a growing focus on <span class="accent">cybersecurity</span>.
+          </h1>
 
-          <p class="lead">
-            Software Engineering graduate (University of Jeddah) with experience in Odoo customization (HR/ERP), IT operations,
-            corporate email security (SPF/DKIM/DMARC), and web projects. Currently pursuing a Higher Diploma in Cybersecurity.
+          <p class="lead" data-i18n="hero_lead">
+            Software Engineering graduate (University of Jeddah). I build clean, responsive websites and practical solutions.
+            Currently pursuing a Higher Diploma in Cybersecurity.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="#projects">View Case Studies</a>
-            <a class="btn ghost" href="assets/CV.MARYAM.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+            <a class="btn primary" href="#projects" data-i18n="btn_work">View Work</a>
+            <a class="btn ghost" href="assets/CV.MARYAM.pdf" target="_blank" rel="noopener" data-i18n="btn_cv">Download Resume (PDF)</a>
           </div>
 
           <div class="meta">
-            <div class="pill">Email: SPF • DKIM • DMARC</div>
-            <div class="pill">Web: HTML • CSS • JavaScript</div>
-            <div class="pill">Odoo: HR • Website • Product Database</div>
+            <div class="pill" data-i18n="pill_1">Web: HTML • CSS • JavaScript</div>
+            <div class="pill" data-i18n="pill_2">GitHub Pages • Responsive UI</div>
+            <div class="pill" data-i18n="pill_3">Cybersecurity: Fundamentals • Best Practices</div>
           </div>
         </div>
 
@@ -73,8 +73,8 @@
           <div class="card spotlight">
             <div class="spot-top">
               <div>
-                <div class="spot-title">Quick Links</div>
-                <div class="spot-sub">Profiles & downloads</div>
+                <div class="spot-title" data-i18n="quick_title">Quick Links</div>
+                <div class="spot-sub" data-i18n="quick_sub">Profiles & downloads</div>
               </div>
               <div class="dot" aria-hidden="true"></div>
             </div>
@@ -84,31 +84,31 @@
                 <span>LinkedIn</span><span class="arrow">↗</span>
               </a>
               <a class="link-row" href="assets/AI.pdf" target="_blank" rel="noopener">
-                <span>SDAIA AI Certificate (PDF)</span><span class="arrow">↗</span>
+                <span data-i18n="quick_ai">SDAIA AI Certificate (PDF)</span><span class="arrow">↗</span>
               </a>
               <a class="link-row" href="assets/CV.MARYAM.pdf" target="_blank" rel="noopener">
-                <span>Resume (PDF)</span><span class="arrow">↗</span>
+                <span data-i18n="quick_cv">Resume (PDF)</span><span class="arrow">↗</span>
               </a>
             </div>
 
             <div class="spot-bottom">
-              <div class="small">Open to opportunities</div>
-              <div class="availability"><span class="pulse" aria-hidden="true"></span> Available</div>
+              <div class="small" data-i18n="open_to">Open to opportunities</div>
+              <div class="availability"><span class="pulse" aria-hidden="true"></span> <span data-i18n="available">Available</span></div>
             </div>
           </div>
 
           <div class="card stats">
             <div class="stat">
               <div class="stat-num">2019–2024</div>
-              <div class="stat-label">BSc Software Engineering</div>
+              <div class="stat-label" data-i18n="stat_1">BSc Software Engineering</div>
             </div>
             <div class="stat">
-              <div class="stat-num">Odoo</div>
-              <div class="stat-label">HR / ERP customization</div>
+              <div class="stat-num">Web</div>
+              <div class="stat-label" data-i18n="stat_2">Frontend development</div>
             </div>
             <div class="stat">
-              <div class="stat-num">Marketing</div>
-              <div class="stat-label">Design & social media</div>
+              <div class="stat-num">Security</div>
+              <div class="stat-label" data-i18n="stat_3">Cybersecurity diploma</div>
             </div>
           </div>
         </div>
@@ -120,32 +120,29 @@
     <section id="about" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>About</h2>
-          <p>Practical, business-focused, and detail-oriented.</p>
+          <h2 data-i18n="about_title">About</h2>
+          <p data-i18n="about_sub">Practical, detail-oriented, and focused on clean code.</p>
         </div>
 
         <div class="grid two">
           <div class="card">
-            <h3>Summary</h3>
-            <p>
-              I bridge business needs and technology delivery. My work includes Odoo ERP customization (HR/ERP),
-              IT operations, email/domain security configurations, and building web experiences for corporate presence.
+            <h3 data-i18n="about_summary_title">Summary</h3>
+            <p data-i18n="about_summary_p1">
+              I’m a Software Engineering graduate with hands-on experience building responsive web pages and supporting real business needs.
             </p>
-            <p>
-              I also support digital marketing through social media management and design. Currently, I’m developing deeper skills
-              through a Higher Diploma in Cybersecurity.
+            <p data-i18n="about_summary_p2">
+              I’m currently expanding my skills through a Higher Diploma in Cybersecurity, with a strong interest in secure and reliable systems.
             </p>
           </div>
 
           <div class="card">
-            <h3>Core Skills</h3>
+            <h3 data-i18n="about_skills_title">Core Skills</h3>
             <ul class="bullets">
-              <li>Odoo ERP customization (HR, Website, Product Database)</li>
-              <li>IT operations & infrastructure planning</li>
-              <li>Corporate email security (SPF, DKIM, DMARC)</li>
-              <li>Web development: HTML, CSS, JavaScript</li>
-              <li>Branding, graphic design & marketing content</li>
-              <li>Cybersecurity fundamentals</li>
+              <li data-i18n="skill_1">Web development: HTML, CSS, JavaScript</li>
+              <li data-i18n="skill_2">Responsive UI, clean layouts, accessibility basics</li>
+              <li data-i18n="skill_3">Git & GitHub, deployment with GitHub Pages</li>
+              <li data-i18n="skill_4">Technical documentation and structured work</li>
+              <li data-i18n="skill_5">Cybersecurity fundamentals and best practices</li>
             </ul>
           </div>
         </div>
@@ -155,50 +152,50 @@
     <section id="experience" class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2>Experience</h2>
-          <p>Roles focused on systems, operations, and business impact.</p>
+          <h2 data-i18n="exp_title">Experience</h2>
+          <p data-i18n="exp_sub">Roles focused on systems, delivery, and business impact.</p>
         </div>
 
         <div class="timeline">
           <div class="t-item card">
             <div class="t-top">
               <div>
-                <h3>IT Technician</h3>
-                <div class="muted">Alkan Industrial Co. • Mar 2025 – Sep 2025</div>
+                <h3 data-i18n="job1_title">IT Technician</h3>
+                <div class="muted" data-i18n="job1_meta">Alkan Industrial Co. • Mar 2025 – Sep 2025</div>
               </div>
-              <span class="chip">IT • Odoo • Email</span>
+              <span class="chip" data-i18n="job1_chip">Systems • Delivery</span>
             </div>
             <ul class="bullets">
-              <li>Managed corporate email accounts, security protocols (SPF/DKIM/DMARC), and unified signatures.</li>
-              <li>Customized Odoo ERP: website + product database with specifications and origin details.</li>
-              <li>Planned server/network infrastructure for scalability and security.</li>
+              <li data-i18n="job1_b1">Supported business systems and improved operational workflows.</li>
+              <li data-i18n="job1_b2">Worked on structured product data and web presence support.</li>
+              <li data-i18n="job1_b3">Contributed to secure configurations and reliable operations.</li>
             </ul>
           </div>
 
           <div class="t-item card">
             <div class="t-top">
               <div>
-                <h3>IT Assistant (Internship)</h3>
-                <div class="muted">Basaffar Eye Clinic • May 2024 – Jul 2024</div>
+                <h3 data-i18n="job2_title">IT Assistant (Internship)</h3>
+                <div class="muted" data-i18n="job2_meta">Basaffar Eye Clinic • May 2024 – Jul 2024</div>
               </div>
-              <span class="chip">Support</span>
+              <span class="chip" data-i18n="job2_chip">Support</span>
             </div>
             <ul class="bullets">
-              <li>Supported daily IT operations, troubleshooting, and documentation.</li>
+              <li data-i18n="job2_b1">Supported daily operations, troubleshooting, and documentation.</li>
             </ul>
           </div>
 
           <div class="t-item card">
             <div class="t-top">
               <div>
-                <h3>Tech Assistant</h3>
-                <div class="muted">First Decoration Co. • Apr 2021 – May 2024</div>
+                <h3 data-i18n="job3_title">Tech Assistant</h3>
+                <div class="muted" data-i18n="job3_meta">First Decoration Co. • Apr 2021 – May 2024</div>
               </div>
-              <span class="chip">Operations</span>
+              <span class="chip" data-i18n="job3_chip">Operations</span>
             </div>
             <ul class="bullets">
-              <li>Supported procurement, vendor coordination, and document organization.</li>
-              <li>Contributed to branding assets (profiles, business cards, social content).</li>
+              <li data-i18n="job3_b1">Supported coordination, documentation, and operational tasks.</li>
+              <li data-i18n="job3_b2">Contributed to brand assets and digital content support.</li>
             </ul>
           </div>
         </div>
@@ -208,124 +205,85 @@
     <section id="projects" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>Case Studies</h2>
-          <p>Deeper look into selected work across Odoo, web, and IT.</p>
+          <h2 data-i18n="work_title">Work</h2>
+          <p data-i18n="work_sub">Selected projects and real outcomes.</p>
         </div>
 
         <div class="grid two case-grid">
           <article class="card project case">
             <div class="proj-top">
-              <h3>Odoo ERP Customization (HR / Website / Product Database)</h3>
-              <span class="chip">Case Study</span>
+              <h3 data-i18n="p1_title">Portfolio Website (GitHub Pages)</h3>
+              <span class="chip" data-i18n="chip_project">Project</span>
             </div>
 
             <div class="case-block">
-              <div class="case-label">Problem</div>
-              <p class="muted">The business needed a structured ERP setup to manage products and present them clearly online.</p>
+              <div class="case-label" data-i18n="label_stack">Stack</div>
+              <p class="muted" data-i18n="p1_stack">HTML • CSS • JavaScript • GitHub Pages</p>
             </div>
 
             <div class="case-block">
-              <div class="case-label">Solution</div>
+              <div class="case-label" data-i18n="label_focus">Focus</div>
               <ul class="bullets">
-                <li>Configured Odoo website and catalog structure.</li>
-                <li>Built a detailed product database (marble/granite/stone) with specs and origin fields.</li>
-                <li>Organized data to support operations and quoting.</li>
+                <li data-i18n="p1_b1">Clean, responsive layout optimized for readability.</li>
+                <li data-i18n="p1_b2">Clear sections for skills, experience, and certifications.</li>
+                <li data-i18n="p1_b3">Fast loading + simple deployment.</li>
               </ul>
             </div>
-
-            <div class="case-block">
-              <div class="case-label">Impact</div>
-              <p class="muted">Improved consistency of product information and made browsing and quoting faster for the team.</p>
-            </div>
           </article>
 
           <article class="card project case">
             <div class="proj-top">
-              <h3>Corporate Email Security Setup</h3>
-              <span class="chip">IT</span>
+              <h3 data-i18n="p2_title">Corporate Website Support</h3>
+              <span class="chip" data-i18n="chip_live">Live</span>
             </div>
-
-            <div class="case-block">
-              <div class="case-label">Scope</div>
-              <ul class="bullets">
-                <li>SPF / DKIM / DMARC configuration</li>
-                <li>Standardized signatures and account governance</li>
-                <li>Improved deliverability and reduced spoofing risk</li>
-              </ul>
-            </div>
-
-            <div class="case-mini">
-              <span class="pill">Email Security</span>
-              <span class="pill">Governance</span>
-              <span class="pill">Best practices</span>
-            </div>
-          </article>
-
-          <article class="card project case">
-            <div class="proj-top">
-              <h3>Alkan Website (Odoo)</h3>
-              <span class="chip">Live</span>
-            </div>
-            <p class="muted">Company website created and maintained via Odoo.</p>
+            <p class="muted" data-i18n="p2_desc">Web presence support and structured content delivery.</p>
 
             <div class="case-actions">
-              <a class="btn small" href="https://alkan1.odoo.com" target="_blank" rel="noopener">Visit Website ↗</a>
-              <a class="btn small ghost" href="#contact">Request Details</a>
+              <a class="btn small" href="https://gulf-ec.com.sa" target="_blank" rel="noopener" data-i18n="btn_visit">Visit Website ↗</a>
+              <a class="btn small ghost" href="#contact" data-i18n="btn_details">Request Details</a>
             </div>
 
             <div class="case-mini">
-              <span class="pill">Odoo Website</span>
-              <span class="pill">Catalog-ready</span>
-              <span class="pill">Content structure</span>
+              <span class="pill" data-i18n="p2_tag1">Web</span>
+              <span class="pill" data-i18n="p2_tag2">Content</span>
+              <span class="pill" data-i18n="p2_tag3">Delivery</span>
             </div>
           </article>
 
           <article class="card project case">
             <div class="proj-top">
-              <h3>Gulf EC Website</h3>
-              <span class="chip">Live</span>
-            </div>
-            <p class="muted">Corporate website project and online presence support.</p>
-
-            <div class="case-actions">
-              <a class="btn small" href="https://gulf-ec.com.sa" target="_blank" rel="noopener">Visit Website ↗</a>
-              <a class="btn small ghost" href="#contact">Request Details</a>
-            </div>
-
-            <div class="case-mini">
-              <span class="pill">Website</span>
-              <span class="pill">Brand support</span>
-              <span class="pill">Professional presence</span>
-            </div>
-          </article>
-
-          <article class="card project case">
-            <div class="proj-top">
-              <h3>Graduation Project (BLOOM)</h3>
+              <h3 data-i18n="p3_title">Graduation Project (BLOOM)</h3>
               <span class="chip">ML</span>
             </div>
             <div class="case-block">
-              <div class="case-label">Highlights</div>
+              <div class="case-label" data-i18n="label_highlights">Highlights</div>
               <ul class="bullets">
-                <li>Plant identification model using machine learning.</li>
-                <li>Achieved 85% accuracy.</li>
-                <li>Earned an A+ grade.</li>
+                <li data-i18n="p3_b1">Plant identification model using machine learning.</li>
+                <li data-i18n="p3_b2">Achieved 85% accuracy.</li>
+                <li data-i18n="p3_b3">Earned an A+ grade.</li>
               </ul>
             </div>
           </article>
 
           <article class="card project case">
             <div class="proj-top">
-              <h3>Social Media & Marketing Design</h3>
-              <span class="chip">Marketing</span>
+              <h3 data-i18n="p4_title">Email Security Setup</h3>
+              <span class="chip" data-i18n="chip_security">Security</span>
             </div>
+
             <div class="case-block">
-              <div class="case-label">What I do</div>
+              <div class="case-label" data-i18n="label_scope">Scope</div>
               <ul class="bullets">
-                <li>Managed company accounts and created marketing designs.</li>
-                <li>Supported brand consistency across posts and visuals.</li>
-                <li>Content planning and coordination.</li>
+                <li data-i18n="p4_b1">SPF / DKIM / DMARC configuration</li>
+                <li data-i18n="p4_b2">Standardized signatures and account governance</li>
+                <li data-i18n="p4_b3">Improved deliverability and reduced spoofing risk</li>
               </ul>
+            </div>
+
+            <div class="case-mini">
+              <span class="pill">SPF</span>
+              <span class="pill">DKIM</span>
+              <span class="pill">DMARC</span>
             </div>
           </article>
         </div>
@@ -335,40 +293,40 @@
     <section id="certifications" class="section alt">
       <div class="container">
         <div class="section-head">
-          <h2>Certifications</h2>
-          <p>Selected credentials and training.</p>
+          <h2 data-i18n="certs_title">Certifications</h2>
+          <p data-i18n="certs_sub">Selected credentials and training.</p>
         </div>
 
         <div class="grid two">
           <div class="card">
             <h3>IBM SkillsBuild</h3>
             <ul class="bullets">
-              <li>Cybersecurity Fundamentals (Nov 2024)</li>
-              <li>Web Development Fundamentals (Nov 2024)</li>
+              <li data-i18n="cert_ibm_1">Cybersecurity Fundamentals (Nov 2024)</li>
+              <li data-i18n="cert_ibm_2">Web Development Fundamentals (Nov 2024)</li>
             </ul>
 
             <div class="gallery">
               <figure>
                 <img src="assets/ibm-web-dev-fundamentals.png" alt="IBM SkillsBuild Web Development Fundamentals badge" loading="lazy">
-                <figcaption>Web Development Fundamentals — IBM SkillsBuild</figcaption>
+                <figcaption data-i18n="fig_web">Web Development Fundamentals — IBM SkillsBuild</figcaption>
               </figure>
               <figure>
                 <img src="assets/ibm-cybersecurity-fundamentals.png" alt="IBM SkillsBuild Cybersecurity Fundamentals badge" loading="lazy">
-                <figcaption>Cybersecurity Fundamentals — IBM SkillsBuild</figcaption>
+                <figcaption data-i18n="fig_cyber">Cybersecurity Fundamentals — IBM SkillsBuild</figcaption>
               </figure>
             </div>
           </div>
 
           <div class="card">
-            <h3>Other Training</h3>
+            <h3 data-i18n="other_train">Other Training</h3>
             <ul class="bullets">
-              <li>Introduction to Cybersecurity — Cisco (Aug 2024)</li>
-              <li>Data Management & Analytics — Huawei (Jul 2024)</li>
-              <li>Fundamentals of Information Security — Institute of Public Administration (1441–1442)</li>
-              <li>Artificial Intelligence Concepts and Advanced Applications — SDAIA (Sep 2025)</li>
+              <li data-i18n="cert_other_1">Introduction to Cybersecurity — Cisco (Aug 2024)</li>
+              <li data-i18n="cert_other_2">Data Management & Analytics — Huawei (Jul 2024)</li>
+              <li data-i18n="cert_other_3">Fundamentals of Information Security — Institute of Public Administration</li>
+              <li data-i18n="cert_other_4">Artificial Intelligence Concepts and Advanced Applications — SDAIA (Sep 2025)</li>
             </ul>
 
-            <a class="btn small" href="assets/AI.pdf" target="_blank" rel="noopener">Open SDAIA Certificate (PDF) ↗</a>
+            <a class="btn small" href="assets/AI.pdf" target="_blank" rel="noopener" data-i18n="btn_ai">Open SDAIA Certificate (PDF) ↗</a>
           </div>
         </div>
       </div>
@@ -377,17 +335,17 @@
     <section id="contact" class="section">
       <div class="container">
         <div class="section-head">
-          <h2>Contact</h2>
-          <p>Let’s connect.</p>
+          <h2 data-i18n="contact_title">Contact</h2>
+          <p data-i18n="contact_sub">Let’s connect.</p>
         </div>
 
         <div class="grid three">
           <div class="card">
-            <h3>Email</h3>
+            <h3 data-i18n="contact_email">Email</h3>
             <p><a href="mailto:Maryama.sha1a@gmail.com">Maryama.sha1a@gmail.com</a></p>
           </div>
           <div class="card">
-            <h3>Phone</h3>
+            <h3 data-i18n="contact_phone">Phone</h3>
             <p><a href="tel:+966572566775">+966 57 256 6775</a></p>
           </div>
           <div class="card">
